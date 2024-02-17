@@ -1,0 +1,45 @@
+{
+  "name": "@scope/npm-module-typescript-example",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsup",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:dmitry-izmerov/npm-module-typescript-example.git"
+  },
+  "author": "Dmitrii Izmerov",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/dmitry-izmerov/npm-module-typescript-example",
+  "publishConfig": {
+    "registry": "https://nexus-private-repository.com/repository/libs/"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.23.10",
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "tsup": "^6.7.0",
+    "typescript": "^4.6.4"
+  },
+  "tsup": {
+    "entry": [
+      "src/**"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true,
+    "target": "ES2022",
+    "format": "esm",
+    "dts": true
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ]
+}
